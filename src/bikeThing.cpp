@@ -1,9 +1,3 @@
-/******************************************************/
-//       THIS IS A GENERATED FILE - DO NOT EDIT       //
-/******************************************************/
-
-#include "application.h"
-#line 1 "/home/aaron/Repos/bikeThing/src/bikeThing.ino"
 /*
  * Project: bikeThing
  * Description: Smart bike tracker and theft detector
@@ -11,19 +5,12 @@
  * Date: 7-08-19
  */
 
+#include "application.h"
 #include <blynk.h>
 #include <TinyGPS++.h>
 #include "init.h"
 #include "regman.h"
 #include "blynkkey.h"
-
-void initBlynk();
-void setup();
-bool parseGPS();
-void resetInterrupt();
-void loop();
-#line 14 "/home/aaron/Repos/bikeThing/src/bikeThing.ino"
-SYSTEM_MODE(MANUAL);
 
 #define UART_TX_BUF_SIZE 20
 #define GPSSerial Serial1
@@ -31,6 +18,12 @@ SYSTEM_MODE(MANUAL);
 #define AccelInterrupt D8
 #define MAP_PIN V0
 #define DISPLAY_PIN V1
+
+void initBlynk();
+void setup();
+bool parseGPS();
+void resetInterrupt();
+void loop();
 
   void onDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer, void* context);
 
